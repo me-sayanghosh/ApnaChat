@@ -12,7 +12,7 @@ const CreatePost = () => {
 
 
     const formData = new FormData(e.target);
-    axios.post('http://localhost:3000/creat-posts', formData)
+    axios.post('https://apnachat-mn3v.onrender.com/create-post', formData)
     .then(res => {
         setLoading(false);
         navigate("/");

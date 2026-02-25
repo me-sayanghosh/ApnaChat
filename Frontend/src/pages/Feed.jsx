@@ -10,7 +10,7 @@ const Feed = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get('http://localhost:3000/posts')
+        axios.get('https://apnachat-mn3v.onrender.com/posts')
         .then(response => {
             console.log(response.data);
             setPosts(response.data.posts);
@@ -24,7 +24,7 @@ const Feed = () => {
 
     const confirmDelete = async () => {
         try {
-            await axios.delete(`http://localhost:3000/posts/${deleteId}`);
+            await axios.delete(`https://apnachat-mn3v.onrender.com/posts/${deleteId}`);
             setPosts(posts.filter(post => post._id !== deleteId));
         } catch (err) {
             console.error('Failed to delete post:', err);

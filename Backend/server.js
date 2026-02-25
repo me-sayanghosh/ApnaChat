@@ -4,7 +4,8 @@ const connectDB = require('./src/db/db');
 
 connectDB();
 
-
+const cors = require("cors");
+app.use(cors());
 
 
 
