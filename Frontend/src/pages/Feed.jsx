@@ -13,11 +13,13 @@ const Feed = () => {
         axios.get('https://apnachat-mn3v.onrender.com/posts')
         .then(response => {
             console.log(response.data);
-            setPosts(response.data.posts);
+            if (response.data && response.data.posts) {
+                setPosts(response.data.posts);
+            }
             setLoading(false);
         })
         .catch(err => {
-            console.error(err);
+            console.error('Error fetching posts:', err);
             setLoading(false);
         });
     }, []);
