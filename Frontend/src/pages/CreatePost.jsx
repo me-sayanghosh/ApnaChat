@@ -34,7 +34,7 @@ const CreatePost = () => {
 
   return (
     <section className='create-post-section'>
-        <button className='back-home-btn' onClick={() => navigate('/')}>↩ Back to Home</button>
+        <button className='back-home-btn' onClick={() => navigate('/')}>↩ Back to Feed</button>
         <h1>Create Post</h1>
 
         {loading ? (
